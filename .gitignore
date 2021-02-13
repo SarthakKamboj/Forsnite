@@ -1,0 +1,14 @@
+code
+Assembly-CSharp.csproj
+Forsnite.sln
+Library
+Logs
+obj
+Packages
+ProjectSettings
+Temp
+**/*.meta
+.gitignore.swp
+Builds
+Assets/TextMesh Pro
+.vscode
