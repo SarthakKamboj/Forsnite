@@ -1,20 +1,22 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Run : MonoBehaviour
 {
     [SerializeField] Transform mainCamera;
     [SerializeField] CharacterController cc;
+    [SerializeField] Animator characterAnimator;
     [SerializeField] float speed = 100f;
     [SerializeField] float smoothTime = 0.01f;
 
     float curVelocity = 0f;
     float horizontal, vertical;
     float camYRot;
+    int speedHash;
 
     void Start()
     {
         camYRot = mainCamera.rotation.eulerAngles.y;
+        speedHash = Animator.StringToHash("Speed");
     }
 
     void Update()
@@ -36,5 +38,7 @@ public class Run : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
             cc.Move(moveDir.normalized * inputVec.magnitude * speed * Time.deltaTime);
         }
+
+        characterAnimator.SetFloat(speedHash, inputVec.magnitude);
     }
 }
