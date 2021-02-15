@@ -27,7 +27,6 @@ public class Gravity : MonoBehaviour
     public bool isGrounded()
     {
         return Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayerMask);
-        // return cc.isGrounded;
     }
 
 

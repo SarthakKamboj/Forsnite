@@ -19,4 +19,9 @@ public class WallCreation : MonoBehaviour
             renderer.material = builtMat;
         }
     }
+
+    public void WallCreated()
+    {
+        gameObject.layer = 9;
+    }
 }
