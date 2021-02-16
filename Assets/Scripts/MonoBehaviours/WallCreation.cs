@@ -6,22 +6,19 @@ public class WallCreation : MonoBehaviour
     [SerializeField] Material simMat;
     [SerializeField] Material builtMat;
     [SerializeField] Renderer renderer;
+    [SerializeField] Collider wallCollider;
 
     // TODO: raycast from camera and simulate wall creation
-    void Update()
+
+    void Start()
     {
-        if (Input.GetMouseButton(0))
-        {
-            renderer.material = simMat;
-        }
-        else
-        {
-            renderer.material = builtMat;
-        }
+        renderer.material = simMat;
     }
 
     public void WallCreated()
     {
-        gameObject.layer = 9;
+        gameObject.layer = LayerMask.NameToLayer("Wall");
+        wallCollider.isTrigger = false;
+        renderer.material = builtMat;
     }
 }

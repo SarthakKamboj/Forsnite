@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 440505097274767647}
   - component: {fileID: 440505097274767646}
   - component: {fileID: 440505097274767645}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 440505097564639801}
   - component: {fileID: 440505097564639800}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 440505097564639807}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.42}
-  m_LocalScale: {x: 5, y: 5, z: 0.24}
+  m_LocalScale: {x: 10, y: 10, z: 0.1}
   m_Children:
   - {fileID: 440505097274767644}
   m_Father: {fileID: 0}
@@ -140,3 +140,4 @@ MonoBehaviour:
   simMat: {fileID: 2100000, guid: 4ca5aa0d38fd27e468b41375747bf247, type: 2}
   builtMat: {fileID: 2100000, guid: 987eb9272845e1c4e8ef97da4594f00c, type: 2}
   renderer: {fileID: 440505097274767646}
+  wallCollider: {fileID: 440505097274767645}
